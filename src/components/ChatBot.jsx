@@ -25,7 +25,7 @@ const ChatBot = () => {
     setInput("");
 
     try {
-      const res = await fetch("https://loving-jaybird-correctly.ngrok-free.app/api/generate-blog", {
+      const res = await fetch("https://social-media-blog-0aw9.onrender.com/api/generate-blog", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: input }),
