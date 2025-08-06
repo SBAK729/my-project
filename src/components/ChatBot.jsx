@@ -22,7 +22,7 @@ export default function ChatBot() {
 
       setMessages((prev) => [
         ...prev,
-        { text: data.response || "No response", sender: "bot" },
+        { text: data.response.message || "No response", sender: "bot" },
       ]);
     } catch (err) {
       console.error(err);
