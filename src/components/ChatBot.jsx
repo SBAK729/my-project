@@ -26,9 +26,10 @@ export default function ChatBot() {
 
     if (message) return message;
 
-    if (title && content && hashtags) {
-      return `**${title}**\n\n${content}\n\n**Hashtags:** ${hashtags}`;
-    }
+  if (title && content && hashtags) {
+    const formatted = `Title: ${title}\n\n${content}\n\nHashtags: ${hashtags}`;
+    return { type: "text", data: formatted };
+  }
 
     return "Sorry, I couldn't process the response.";
   };
